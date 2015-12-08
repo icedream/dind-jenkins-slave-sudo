@@ -1,4 +1,4 @@
 FROM tehranian/dind-jenkins-slave:latest
 
-RUN adduser jenkins sudoers
-RUN sed -i 's,.*%sudoers.*,%sudoers ALL = (ALL) NOPASSWD: ALL,g' /etc/sudoers
+RUN adduser jenkins sudo
+RUN sed -i 's,.*%sudo.*,%sudo ALL = (ALL) NOPASSWD: ALL,g' /etc/sudoers
